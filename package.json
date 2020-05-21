@@ -1,0 +1,46 @@
+{
+  "name": "tesseract",
+  "version": "0.0.1",
+  "description": "A Threejs project to show a 4d rotating tesseract.",
+  "author": "Gulan28",
+  "main": "app.js",
+  "scripts": {
+    "dev": "run-s dev:js webpack-server",
+    "build": "run-s prebuild build:js",
+    "prebuild": "run-s clean lint",
+    "clean": "rimraf build",
+    "lint": "eslint src/js/",
+    "webpack-server": "webpack-dev-server --env.NODE_ENV=dev --progress --color --open --hot",
+    "webpack-watch": "webpack --env.NODE_ENV=dev --progress --color --watch --hot",
+    "dev:js": "webpack --env.NODE_ENV=dev",
+    "build:dir": "copyfiles -a -u 2 src/public/assets/**/*.* build/",
+    "build:js": "webpack --env.NODE_ENV=prod --progress --color --verbose"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.7",
+    "es6-promise": "^4.2.8",
+    "three": "^0.116.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "copyfiles": "^2.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "rimraf": "^2.7.1",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^3.0.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

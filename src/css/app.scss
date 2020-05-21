@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+  background-color: #000;
+}
+
+body {
+  font-family:Monaco, monospace;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  outline: 0px solid transparent;
+  :focus {
+    outline: 0px solid transparent;
+  }
+}
+
+.footer {
+  position:absolute;
+  bottom:0;
+  left:0;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  flex-shrink: 0;
+  text-align: center;
+  width: 100%;
+}
