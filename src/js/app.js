@@ -33,17 +33,17 @@ const lineColor2 = 0xFC913A;
 const MaterialColor = 0x79BD9A;
 
 // GUI code
-let options = {
+const options = {
   autorotate: true,
   rotation: {xa: Math.PI/2, ya: 0, za: 0}
 };
 
 const gui = new dat.GUI({closed: false})
-let rotgui = gui.addFolder('Rotation');
+const rotgui = gui.addFolder('Rotation');
 rotgui.add(options.rotation, 'xa', 0, Math.PI*2).name('on XW plane');
 rotgui.add(options.rotation, 'ya', 0, Math.PI*2).name('on YW plane');
 rotgui.add(options.rotation, 'za', 0, Math.PI*2).name('on ZW plane');
-gui.add(options, 'autorotate', )
+gui.add(options, 'autorotate');
 
 // creates coords centered at the origin
 const coords = labels.map(function(label){ return label.split("").map(function(num){ return parseInt(num) - 0.5;})});
@@ -223,7 +223,7 @@ function init() {
   cubeGeometry = new THREE.Geometry();
   for (var i=0; i<8; i++) {
     cubeGeometry.vertices.push(
-      new THREE.Vector3(0, 0, 0),
+      new THREE.Vector3(0, 0, 0)
     );
   }
 
@@ -239,7 +239,7 @@ function init() {
     new THREE.Face3(2, 7, 6),
     new THREE.Face3(2, 3, 7),
     new THREE.Face3(4, 1, 0),
-    new THREE.Face3(4, 5, 1),
+    new THREE.Face3(4, 5, 1)
   );
   cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
   scene.add(cube);
