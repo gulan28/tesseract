@@ -6,8 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
+const package = require('./package.json');
+
 // Paths
-const entry = './src/js/app.js';
+let entry = {
+  app: './src/js/app.js',
+  explainer: './src/js/explainer.js',
+};
+
 const includePath = path.join(__dirname, 'src/js');
 const nodeModulesPath = path.join(__dirname, 'node_modules');
 
@@ -41,9 +47,7 @@ module.exports = env => {
   return {
     // Here the application starts executing
     // and webpack starts bundling
-    entry: [
-      entry
-    ],
+    entry: entry,
 
     // options related to how webpack emits results
     output: {
@@ -96,7 +100,29 @@ module.exports = env => {
             'postcss-loader',
             'sass-loader',
           ],
-        }
+        },
+        {
+         test: /\.(woff|svg|woff2|eot|ttf|otf)$/,
+         use: [
+           {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]',
+            },
+          },
+         ],
+       },
+       {
+         test: /\.(png|jpe?g|gif)$/i,
+         use: [
+           {
+             loader: 'file-loader',
+             options: {
+               name: 'images/[name].[ext]',
+             },
+           },
+         ],
+       },
       ]
     },
 
@@ -133,6 +159,14 @@ module.exports = env => {
         title: 'Tesseract',
         template: path.join(__dirname, 'src/index.html'),
         filename: '../index.html',
+        chunks: ['vendors', 'app'],
+        env: env.NODE_ENV,
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Tesseract-Explained',
+        template: path.join(__dirname, 'src/explained.html'),
+        filename: '../explained.html',
+        chunks: ['explainer'],
         env: env.NODE_ENV,
       }),
       new MiniCssExtractPlugin({
