@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gulan breaks down what tesseracts are.">
+    <title>Tesseract | Explained</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="js/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="js/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="js/images/favicon-16x16.png">
+  <link href="js/../css/2.css" rel="stylesheet"></head>
+  <body>
+    <article>
+      <h1> Tesseract, explained.</h1>
+      <p class="subtitle"> Gulan Twentyeight</p>
+      <section>
+        <p><em>You can <a href="https://gulan28.com/tesseract"> try out the demo</a> and come back here or there's a link at the end too.</em></p>
+        <p>The formal definition of a tesseract is that it is the <i>four-dimensional analogue of the cube</i>, which is vague on many levels. For starters, the <i>fourth dimension</i> itself is very hard to visualize!</p>
+        <p>
+          <label for="mn-figure-1" class="margin-toggle">&#8853;</label> <input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img id="threed_space" src="js/images/threed_space.png"/><br/>3D space with <i>X, Y</i> and <i>Z</i> axes</span>
+          Consider our normal 3D space, with <i>X</i>, <i>Y</i> and <i>Z</i> axes. Can you <i>imagine</i> another axis perpendicular to all of them? If you take my word for it and believe that such an axis exists (let's call it <i>W</i>), what are the possibilities? Can you have shapes in it? Cylinders, Pyramids, <b><i>Cubes</i></b>?
+        </p>
+
+        <p>Let's dial it down a notch and go to <i>0-Dimensional</i> space. There are no <i>X</i>,  <i>Y</i> and <i>Z</i> and the only thing that can exist in that dimension is a point. Let's introduce a dimension (say <i>X</i>) and have the point travel on it. If we trace out the path travelled by the point, we get the <b>Line</b>.<label for="sn-line" class="margin-toggle sidenote-number"> </label> <input type="checkbox" id="sn-line" class="margin-toggle"/><span class="sidenote"> Technically it's a <i>line-segment</i>.</span></p>
+        <p>Now we take the line and add another dimension (<i>Y</i>) and have the line travel down the <i>Y-axis</i> for the same distance. If we trace out that path, we get the <b>Square</b>. If we take the square and then do this same exercise on the <i>Z-axis</i>, we get the <b>Cube</b>.</p>
+        <p>For the <i>finale</i>, we take the cube and add a fourth dimension (<i>W</i>) and have it move in that dimension. The shape we get is called a <i>Hypercube</i> or a <b><i>tesseract</i></b>.</p>
+        <figure>
+          <label for="mn-credits-1" class="margin-toggle">&#8853;</label>
+          <input type="checkbox" id="mn-credits-1" class="margin-toggle"/>
+          <span class="marginnote">
+            Image showing how a <b>tesseract</b> is made.
+          </span>
+          <img id="tesseract" src="js/images/tesseract.png"/>
+        </figure>
+
+        <p>We can have other shapes in four dimensions as well. In fact, we can perform this exercise with other platonic solids and get different shapes. Generally, these shapes are called <i>polytopes</i>. We can say the tesseract is one of the <a href="https://en.wikipedia.org/wiki/Regular_4-polytope"><i>regular 4-polytopes</i></a>.</p>
+
+        <p><label for="mn-figure-2" class="margin-toggle">&#8853;</label> <input type="checkbox" id="mn-figure-2" class="margin-toggle"/><span class="marginnote"><img id="net_tesseract" src="js/images/net_of_tesseract.gif"/><br/>Net of a tesseract. <br/><em> credits Wikipedia</em></span> Just as a square is made up of 4 lines and a cube is made up of 6 squares, A tesseract is made up of 8 cubes. Suppose you have a cubical box and you open it up. You get a 2D shape of squares that can be joined up to form the cube again. This opened up figure is called the <i>net</i> of the cube. A particular net of a tesseract looks like a three-dimensional cross and is known as a <i>Dalí cross</i> owing to Salvador Dalí's painting <i>Corpus Hypercubus</i>.</p>
+        <figure>
+          <img id="tesseract" src="js/images/corpus_hypercubus.jpeg"/><br/>
+          Crucifixion (Corpus Hypercubus) by Salvador Dalí
+          <em>Met museum</em>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Projection</h2>
+
+        <p>Now that you have a vague idea about what a tesseract is, let's see how we could visualize one. If you take a cube face a wall and shine a torch on one end, the shadow on the wall would correspond to a square. If you rotate the cube, the shadow also stretches, skews and rotates.</p>
+        <p>Mathematically this process is called a <b><i>projection</i></b> and this underpins all of 3D graphics. That first-person shooter game that you're playing uses projection to show you the 3D world of the game onto your 2D screen. Here's an example of projecting a 2D square on to the <i>X-axis.</i></p>
+        <figure>
+          <img id="projection" src="js/images/projection.png"/>
+        </figure>
+
+        <p>You can do this in four dimensional space too. You can project a 4D point onto 3D and if you want, to lower dimensions. You can rotate the tesseract in 4D space and watch the shadow in 3D. Which brings us to...</p>
+      </section>
+      <section>
+        <h2>The Demo</h2>
+        <figure>
+          <img id="projection" src="js/images/demo.png"/>
+        </figure>
+        <p>The demo shows you the projection of a tesseract in 3D space. The rotation tab on the upper right corner lets you rotate the tesseract along the <i>XW</i>, <i>YW</i> and <i>ZW</i> planes and moving with the mouse lets you see the rotated shape from different angles.</p>
+        <p>Since we can't really represent the fourth dimension well, rotating along the <i>W-axis</i> would look like the tesseract is opening up and closing down on itself. The blue part is one of the eight squares that make up the tesseract so that you can get a feel for its position.</p>
+        <p>Now go <a href="https://gulan28.com/tesseract">play around with it</a> and see if you can visualize how a tesseract would look in four dimensions.</p>
+      </section>
+      <section>
+        <h2> Resources </h2>
+        <p> These are some resources I found useful while building the demo.</p>
+        <p> The first is <a href="http://www.math.union.edu/~dpvc/math/4D/">this link</a> from the mathematics department at Union college which has detailed explanations about tesseracts, along with some cool animations and videos. It is great for building an intuition so I suggest you check it out.</p>
+        <p> <a href="https://youtu.be/iGO12Z5Lw8s">This video</a> from LeiosOS helped me to understand the rotation and projection matrices needed to display the tesseract.</p>
+        <p> <a href="https://observablehq.com/@toja/4d-hypercube">This observable</a> from Torben Jansen was my definitive resource in grokking <i>three.js</i> and tesseracts. He's used a cool trick with hamming distances to determine the positions of each of vertices of the tesseract. Take a look at it.</p>
+      </section>
+    </article>
+    <footer class="footer"><em> <a href="https://gulan28.com">Gulan28.com</a> ☩  ഒരു ഗുലാൻ ഉല്പന്നം </em></footer>
+  <script type="text/javascript" src="js/2.app.js"></script></body>
+</html>
