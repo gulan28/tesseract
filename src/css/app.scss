@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html, body {
   height: 100%;
   background-color: #000;
@@ -16,6 +18,13 @@ canvas {
   }
 }
 
+img {
+  outline: 0px solid transparent;
+  :focus {
+    outline: 0px solid transparent;
+  }
+}
+
 .footer {
   position:absolute;
   bottom:0;
@@ -26,4 +35,16 @@ canvas {
   flex-shrink: 0;
   text-align: center;
   width: 100%;
+}
+
+.helper {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #fff;
+  font-size: 14px;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }

@@ -3,6 +3,11 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+// favicon imports
+import favicon16 from './../images/favicon-16x16.png';
+import favicon32 from './../images/favicon-32x32.png';
+import appleTouchIcon from './../images/apple-touch-icon.png'
+import questionIcon from './../images/question.png'
 
 import * as dat from 'dat.gui'
 
@@ -34,7 +39,7 @@ const MaterialColor = 0x79BD9A;
 
 // GUI code
 const options = {
-  autorotate: true,
+  autorotate: false,
   rotation: {xa: Math.PI/2, ya: 0, za: 0}
 };
 
