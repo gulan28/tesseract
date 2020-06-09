@@ -39,7 +39,7 @@ const MaterialColor = 0x79BD9A;
 
 // GUI code
 const options = {
-  autorotate: false,
+  autorotate: true,
   rotation: {xa: Math.PI/2, ya: 0, za: 0}
 };
 
